@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Questions } from "../Helper/QuestionBank";
 import { QuizContext } from "../Helper/Contexts";
+
 const Quiz = () => {
   const [currQuestion, setCurrQuestion] = useState(0);
   const [ChoosenAnswere, setChoosenAnswere] = useState("");
@@ -37,6 +38,7 @@ const Quiz = () => {
           onClick={() => {
             setChoosenAnswere("A");
           }}
+          className={ChoosenAnswere === "A" ? "selected" : ""}
         >
           {Questions[currQuestion].optionA}
         </button>
@@ -44,6 +46,7 @@ const Quiz = () => {
           onClick={() => {
             setChoosenAnswere("B");
           }}
+          className={ChoosenAnswere === "B" ? "selected" : ""}
         >
           {Questions[currQuestion].optionB}
         </button>
@@ -51,6 +54,7 @@ const Quiz = () => {
           onClick={() => {
             setChoosenAnswere("C");
           }}
+          className={ChoosenAnswere === "C" ? "selected" : ""}
         >
           {Questions[currQuestion].optionC}
         </button>
@@ -58,13 +62,14 @@ const Quiz = () => {
           onClick={() => {
             setChoosenAnswere("D");
           }}
+          className={ChoosenAnswere === "D" ? "selected" : ""}
         >
           {Questions[currQuestion].optionD}
         </button>
       </div>
       {currQuestion === Questions.length - 1 ? (
         <button onClick={finishQuiz} className="btn">
-          Finsih
+          Finish
         </button>
       ) : (
         <button onClick={nextQuestion} className="btn">

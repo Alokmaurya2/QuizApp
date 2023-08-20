@@ -106,9 +106,14 @@
   background-color: #E69A8DFF;
 }
 
-.options :focus {
+.options button.selected {
   background-color: #E69A8DFF;
+
 }
+
+/* .options :focus {
+  background-color: #E69A8DFF;
+} */
 
 .Result-Wrapper {
   display: flex;
