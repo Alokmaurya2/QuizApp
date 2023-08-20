@@ -1,38 +1,157 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(251, 198, 189);
+  height: 100vh;
+}
+
+.App h1 {
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 45px;
+}
+
+.Menu {
+  width: 500px;
+  height: 500px;
+  background-color: #5F4B8BFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Menu input {
+  width: 300px;
+  height: 20px;
+  padding: 5px;
+  font-size: 25px;
+  /* border: 3px solid #E69A8DFF; */
+  padding: 10px;
+  border-radius: 5px;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Menu input::placeholder {
+  font-size: 15px;
+  opacity: 0.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Menu input:focus {
+  border: 3px solid #E69A8DFF;
+  box-shadow: 0 0 10px #E69A8DFF;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu button {
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 150px;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #E69A8DFF;
+  cursor: pointer;
+}
+
+.Quiz {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 500px;
+  background-color: #5F4B8BFF;
+  border-radius: 10px;
+
+}
+
+.Quiz h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  height: 40vh;
+  width: 50vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.options button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+
+.options button:hover {
+  background-color: #E69A8DFF;
+}
+
+.options :focus {
+  background-color: #E69A8DFF;
+}
+
+.Result-Wrapper {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  background-color: #5F4B8BFF;
+  border-radius: 10px;
+}
+
+.outcome {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50vh;
+  gap: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.outcome h2 {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  width: 60%;
+  height: 7%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-1 {
+  width: 60%;
+  height: 10%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.outcome button:hover {
+  background-color: #E69A8DFF;
 }
